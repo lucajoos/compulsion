@@ -21,7 +21,7 @@ module.exports = () => {
             f++;
 
             if(f === modules.length) {
-              t.fire('ready');
+              t.fire('ready', r._);
             }
           }
         };
