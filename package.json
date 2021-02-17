@@ -1,0 +1,26 @@
+{
+  "name": "compulsion",
+  "version": "1.0.0",
+  "description": "Compulsion",
+  "main": "main.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucajoos/compulsion.git"
+  },
+  "keywords": [
+    "quantum.js"
+  ],
+  "author": "Luca Joos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucajoos/compulsion/issues"
+  },
+  "homepage": "https://github.com/lucajoos/compulsion#readme",
+  "dependencies": {
+    "onceupon.js": "^1.5.5"
+  },
+  "devDependencies": {}
+}
