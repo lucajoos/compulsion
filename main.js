@@ -28,8 +28,8 @@ module.exports = () => {
           };
 
           module({
-            quantum: r,
-            module: c
+            core: r,
+            build: c
           });
         }
       });
