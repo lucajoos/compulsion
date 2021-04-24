@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap')
+
+$white = #fdfffc
+$black = #011627
+$text = #7d8597
+$bright = #b2bcd4
+$primary = #8338ec
+$primary-highlight = #9a4fff
+
+html, body
+  margin 0
+  padding 0
+
+html
+  width 420px
+
+  body
+    text-align center
+    background $white
+    color $black
+    font-size 1.1em
+    font-family 'Open Sans', sans-serif
+    display flex
+
+    .render
+      width 420px
+
+    i
+      transition color .2s
+
+    a
+      color $white
+      background $primary
+      padding 12.5px 40px
+      border-radius 100px
+      text-decoration none
+      display inline-block
+      margin 10px 0
+      transition background .2s
+
+      &.invisible
+        opacity 0
+        pointer-events none
+
+      &:hover
+        background $primary-highlight
+
+      i
+        margin 0 10px 0 0
+
+
+    .header
+      background $black
+      color $white
+      padding 40px 30px
+      flex 1
+
+      i
+        position absolute
+        top 30px
+        cursor pointer
+        color $text
+
+        &:hover
+          color $bright
+
+        &.fa-power-off, &.fa-arrow-left
+          left 30px
+
+          &.active
+            color $primary
+
+            &:hover
+              color $primary-highlight
+
+        &.fa-chart-line
+          right calc(50px + 1em)
+        &.fa-cog
+          right 30px
+
+      .count
+        font-size 2.4em
+
+      p
+        color $text
+        font-size .9em
+
+    .content
+      padding 30px
+      position relative
+
+      input
+        margin 25px 0 15px 0
+        padding 12.5px
+        border 1px solid $bright
+        outline none
+        width 100%
+        transition border-color .2s
+        font-size 1em
+        text-align left
+
+        &::placeholder
+          color $bright
+
+        &:focus
+          border-color $primary
+
+
+      .list
+        padding 5px 10px
+        max-height 120px
+        overflow-y scroll
+
+        &::-webkit-scrollbar
+          width 5px
+
+        &::-webkit-scrollbar-track
+          opacity 0
+
+        &::-webkit-scrollbar-thumb
+          background $bright
+
+
+        .list-item
+          cursor pointer
+          position relative
+
+          i
+            margin 0 0 0 10px
+            color $bright
+
+          &:after
+            opacity 0
+            transition opacity .2s
+            content ''
+            position absolute
+            top 0
+            bottom 0
+            left 0
+            right 0
+            height 1px
+            width 100%
+            background $black
+            transform translateY(calc(.5em + 4.5px))
+
+          &:hover
+            &:after
+              opacity 1
+
+    .page
+      .content
+        color $black
+
+    .switch
+      label
+        cursor pointer
+        color $black
+        font-size .9em
+
+        input[type='checkbox']
+          opacity 0
+          width 0
+          height 0
+
+        span
+          &.lever
+            width 45px
+            height 12.5px
+            border-radius 15px
+            background $black
+            display inline-block
+            position relative
+            margin 0 15px 0 10px
+
+            &:after
+              content ''
+              position absolute
+              width 17.5px
+              height 17.5px
+              border-radius 100%
+              background $primary
+              left -2.5px
+              top -2.5px
+              transition background 0.3s, left 0.3s
+        input[type='checkbox']:checked
+          & ~ span
+            &.lever
+              &:after
+                left 30px

@@ -1,0 +1,6 @@
+.idea/
+.git/
+package-lock.json
+*.css
+*.html
+node_modules/
