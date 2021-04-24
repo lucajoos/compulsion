@@ -1,0 +1,25 @@
+{
+  "name": "compulsion",
+  "version": "1.0.0",
+  "description": "A Chrome extension to block websites with blacklists.",
+  "scripts": {
+    "build": "pug index.pug pages && stylus < ./styles.styl > ./styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucajoos/compulsion.git"
+  },
+  "keywords": ["compulsion"],
+  "author": "Luca Joos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucajoos/compulsion/issues"
+  },
+  "homepage": "https://github.com/lucajoos/compulsion#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.8"
+  }
+}
